@@ -1,0 +1,61 @@
+In this project you will learn basic string and array methods by building a music player app. You will be able to play, pause, skip, and shuffle songs.
+
+The HTML and CSS of this project have been provided for you, so you can focus on the JavaScript.
+
+!! when trying to access elements by their id using
+document.getElementById(...);
+in the bracitces when provideing the id, we dont need
+to add the # before the id!!
+
+to define an array 
+let arrayName = [];
+
+
+we can create objects in the array as 
+let arrayName = [
+    {
+        id: 0;
+        name: "hehehe",
+        "two words": "can do this wowo",
+    },
+    {
+        id: 1,
+        name: "second object woah",
+        "two words": "woaaah",
+    }
+];
+
+and because its a let, we can add more on the array latter? right?
+
+
+
+--------------------------------------------------------
+                        WEB AUDIO API 
+--------------------------------------------------------
+All modern browsers support the Web Audio API,
+which lets you generate and process audio in web applications.
+
+
+Use const to create a variable named audio and set it equal to new Audio(). 
+This will create a new HTML5 audio element.
+
+
+The spread operator (...) allows you to copy all elements from one array into another. It can also be used to concatenate multiple arrays into one. In the example below, both arr1 and arr2 have been spread into combinedArr:
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr); // Output: [1, 2, 3, 4, 5, 6]
+
+
+--------------------------------------
+        Arrow functions
+--------------------------------------
+() => {}
+
+To create a named arrow function, you can assign the function to a variable:
+
+const exampleFunction = () => {
+  // code goes here
+}
