@@ -59,3 +59,21 @@ To create a named arrow function, you can assign the function to a variable:
 const exampleFunction = () => {
   // code goes here
 }
+
+To call a named arrow function expression, you can reference the function by its name.
+
+exampleArrowFunction();
+
+
+Just like regular functions, arrow functions can accept multiple parameters.
+
+Here is an example of a named arrow function with one parameter:
+
+const greet = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+If the function only has one parameter, you can omit the parentheses around the parameter list like this:
+
+const greet = name => {
+  console.log(`Hello, ${name}!`);
+};
