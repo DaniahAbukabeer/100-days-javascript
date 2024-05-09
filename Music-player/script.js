@@ -102,13 +102,18 @@ let userData = {
 // const addTwoNumbers = (num1,num2) => num1+ num2;
 // console.log(addTwoNumbers(3,4));
 
+const pauseSong = ()=>{
+  userData.songCurrentTime = audio.currentTime;
+  //we dont have to use ? here because the userData.songCurrentTime will not be
+  //null or undefined at this point
+};
 
 const renderSongs = (array) => {
     const songsHTML = array.map(
         (song)=>{
             return `
             <li id="song-${song.id}" class="playlist-song"></li>
-            <button class="playlist-song-info">
+            <button class="playlist-song-info" onclick="playSong(${song.id})">
             <span class="playlist-song-title">${song.title}</span>
             <span class="playlist-song-artist">${song.artist}</span>
             <span class="playlist-song-duration">${song.duration}</span>
