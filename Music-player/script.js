@@ -106,6 +106,20 @@ const pauseSong = ()=>{
   userData.songCurrentTime = audio.currentTime;
   //we dont have to use ? here because the userData.songCurrentTime will not be
   //null or undefined at this point
+  playButton.classList.remove("playing");
+  audio.pause();
+};
+
+const playNextSong = () => {
+  if (userData?.currentSong === null)
+  {
+    playSong(userData?.songs[0].id);
+  }
+  else {
+    const currentSongIndex = getCurrentSongIndex();
+    const nextSong = userData?.songs[currentSongIndex+1];
+    playSong(nextSong.id);
+  }
 };
 
 const renderSongs = (array) => {
@@ -128,6 +142,12 @@ const renderSongs = (array) => {
     playlistSongs.innerHTML = songsHTML;
 };
 
+const getCurrentSongIndex = () => {
+  return userData?.songs.indexOf(userData?.currentSong);
+}
+
+
+
   playButton.addEventListener("click",()=> {
     if(userData?.currentSong === null)
     {
@@ -137,6 +157,8 @@ const renderSongs = (array) => {
       playSong(userData?.currentSong.id);
     }
   });
+
+  pauseButton.addEventListener("click", pauseSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
