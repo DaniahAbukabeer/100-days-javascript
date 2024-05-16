@@ -190,3 +190,13 @@ document.createElement('div')
 You can also assign it to a variable:
 
 const divElement = document.createElement('div')
+
+----------------------------------------------------------------------
+
+appendChild() lets you add a node or an element as the child of another element. In the example below, the text "Click me" would be attached to the button:
+
+const parentElement = document.createElement("button")
+const parentElementText = document.createTextNode("Click me")
+
+// attach the text "Click me" to the button
+parentElement.appendChild(parentElementText)
