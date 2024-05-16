@@ -134,3 +134,59 @@ console.log(foundNumber); // Output: 30
 
 if theres no way for the data to be undefined or null then dont use
 the chaining operator ?. 
+
+
+--------------------------------------------------------
+The forEach method is used to loop through an array and perform a function on each element of the array. For example, suppose you have an array of numbers and you want to log each number to the console.
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Using forEach to iterate through the array
+numbers.forEach((number) => {
+  console.log(number); // 1, 2, 3, 4, 5
+});
+
+---------------------------------------------------------------------------
+
+textContent sets the text of a node and allows you to set or retrieve the text content of an HTML element.
+
+<div id="example">This is some text content</div>
+const element = document.getElementById('example');
+console.log(element.textContent); // Output: This is some text content
+
+-----------------------------------------------------------------------
+
+In earlier steps, you learned how to work with the sort() method to sort the songs in alphabetical order. Another use case for the callback function is to randomize an array.
+
+One way to randomize an array of items would be to subtract 0.5 from Math.random() which produces random values that are either positive or negative. This makes the comparison result a mix of positive and negative values, leading to a random ordering of elements.
+
+const names = ["Tom", "Jessica", "Quincy", "Naomi"];
+names.sort(() => Math.random() - 0.5);
+
+
+
+---------------------------------------------------------------------
+
+Use the filter() method to remove the song object that matches the id parameter from the userData?.songs array.
+
+The filter method keeps only the elements of an array that satisfy the callback function passed to it:
+
+const numArr = [1, 10, 8, 3, 4, 5]
+const numsGreaterThanThree = numArr.filter((num) => num > 3);
+
+console.log(numsGreaterThanThree) // Output: [10, 8, 4, 5]
+
+
+
+-----------------------------------------------------------------------
+
+createElement() is a DOM method you can use to dynamically create an element using JavaScript. To use createElement(), you call it, then pass in the tag name as a string:
+
+// syntax
+document.createElement(tagName)
+
+// example
+document.createElement('div')
+You can also assign it to a variable:
+
+const divElement = document.createElement('div')
