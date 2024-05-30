@@ -1,0 +1,36 @@
+In this project, you will learn about the JavaScript Date object by building a date formatter.
+
+
+In JavaScript, there are many built-in constructors that create objects. A constructor is like a regular function, but starts with a capital letter, and is initialized with the new operator.
+
+For example, you can use the Date() constructor with the new operator to create a new Date object that returns a string with the current date and time:
+
+const currentDate = new Date();
+console.log(currentDate);
+
+// Output:
+// Mon Aug 23 2021 15:31:00 GMT-0400 (Eastern Daylight Time)
+
+
+The .getMonth() method returns a number between 0 and 11. This represents the month for the date provided, where 0 is January and 11 is December. Because the number this method returns is zero-based, you need to add 1 to it to get the expected month number.
+
+The split() method is used to divide a string into substrings based on a specified separator. It then returns these substrings as elements of an array.
+
+"hello".split("");
+// returns ["h", "e", "l", "l", "o"]
+
+const exampleSentence = "selur pmaCedoCeerf".split();
+If you don't provide a separator, the method will return an array with the original string as the only element.
+
+o reverse an array of elements, you can use the reverse method. This method reverses the order of the elements in the array in place. The first element becomes the last, and the last element becomes the first.
+
+Here is an example of using the reverse method:
+
+// returns [5, 4, 3, 2, 1]
+[1, 2, 3, 4, 5].reverse(); 
+the join method also takes an optional separator. If you don't provide a separator, the default separator is a comma.
+
+Here is an example of using the join method:
+
+// returns "1-2-3-4-5"
+[1, 2, 3, 4, 5].join("-");
